@@ -1,0 +1,46 @@
+REQUIREMENTS:
+
+1] Camera to detect the driver's face in real time
+2] Application : Visual studio
+3] Need dual core processor with 8GB RAM specified system
+4] Operating System : Windows
+
+TECHNOLOGY USED:
+
+1] Python
+2] OpenCV - Open Source Computer Vision Library is an open source computer vision and machine learning software library. A computer vision system can detect the facial emotions and detection of eye and mouth outliners in a real time video stream and then alert the driver by prompting an alarm.
+3] Dlib - Dlib is a general purpose cross platform library written in the programming language in c++. It here used in detection of the facial landmark locaions.
+4] Shape Predictor 68 Face Landmarks [Trained Model]
+
+REQUIRED LIBRARIES:
+
+cmake - 3.23.2
+dlib - 19.24.0
+imutils - 0.5.4
+numpy - 1.19.3
+opencv-python - 4.6.0.66
+scipy
+notify_run
+multiprocessing
+face_utils
+playsound
+
+INSTRUCTIONS TO RUN THE INTELLIGENCE EXPEDITIOUS ACCIDENT DETECTION SYSTEM:
+
+STEP 1: First, keep the detection.py,utilities.py and Alarm.wav in the same folder.
+STEP 2: Install Visual Studio to run the python files.
+STEP 3: In Visual Studio, select File -> Open Folder which contains the python files.
+STEP 4: After opening the files,check whether the required libraries are installed in the system or not.
+STEP 5: If not go to visual studio terminal or command prompt to install the required python libraries.
+STEP 6: Then,click Run -> Run without debugging to execute the program.
+STEP 7: It will take you to the separate window to run the project of accident detection system in real time.
+
+WORKING:
+
+1] We’ll set up a camera that monitors a stream for face in the vehicle in front of the driver’s seat so that we could detect and apply facial landmark localization to monitor the eyes. If a face is found, we apply facial landmark detection and extract the eye regions.
+2] Now that we have the eye regions, we can compute the eye aspect ratio in which we create a function to compute the ratio of the distance between vertical eye landmarks and horizontal eye landmarks. 
+3] If the eye aspect ratio indicates that the eyes have been closed for a small amount of time, the system will sound an alarm.
+4] It will check the same for yawning by calculating the mouth ratio in real time.If the driver is yawning for certain count of time then the system will sound an alarm.
+5] We are using the application of machine vision and Image processing for this purpose with the use of OpenCV, dlib, Python, and ML to implement and run our algorithm. We are using Scipy package also for the euclidean distance between facial landmark points in the eye aspect ratio calculation.
+6] When a driver as the radius between eyelids becomes closer and the radius between the lips becomes larger (i.e.,Yawning), then the driver is about to fall asleep. Then their closed ones will receive continuous popup notifications, which has already been connected and scanned through the secured QR code with their smartphones. Through this, facial emotions and expressions of the driver in the vehicle can be detected so that his/her closed ones can call the driver to prevent the chances of causing accidents.
+
